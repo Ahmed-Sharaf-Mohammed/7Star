@@ -5,4 +5,3 @@ from .models import Rate
 from .models import Recommendation_Model
 # Register your models here.
 admin.site.register(Profile)
-
