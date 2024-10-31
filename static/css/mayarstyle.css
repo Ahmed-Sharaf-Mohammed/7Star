@@ -19,11 +19,46 @@ img{
    
     
 }
-.card{
+/* Base styles for the card */
+.card {
     border: solid 2px;
     width: 700px;
-    height: 620px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+    .content, .main, .infomayar {
+        font-size: 1rem;
+    }
+    img {
+        width: 10em;
+        height: 10em;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+    .content, .main {
+        font-size: 0.9rem;
+    }
+    .edite, .pass {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
 .image{
     background:cadetblue;
     text-align: right;

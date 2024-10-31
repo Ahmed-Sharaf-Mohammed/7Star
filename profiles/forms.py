@@ -15,22 +15,31 @@ class UserForm(forms.ModelForm):
         exclude = ['password',]
 
 
+COURSE_CHOICES = [
+        ('', 'Select a course'),  # Empty choice for default
+        ('a', 'A'),
+        ('b', 'B'),
+        ('c', 'C'),
+    ]
+
+
 class ProfileForm(forms.ModelForm):
-    # dob = forms.DateField(required=False)
     class Meta:
         model = models.Profile
-        fields = ['image', 'phone_number','email', 'city', 'dob', 'gender', 'file', 'face']
+        fields = ['image', 'phone_number', 'email', 'city', 'dob', 'gender', 'course']
         widgets = {
+            'phone_number': widgets.TextInput(attrs={
+                'required': 'required',  # Mark as required
+            }),
+            'course': widgets.Select(choices=COURSE_CHOICES, attrs={
+                'class': 'form-control',
+                'required': 'required',  # Mark as required
+            }),
             'image': widgets.FileInput(attrs={
-                'class': 'fa fa-camera'
+                'class': 'fa fa-camera',
             }),
             'dob': widgets.DateInput(attrs={
-                'type': 'date'
+                'type': 'date',
+                'required': 'required',  # Mark as required
             }),
-            'cv': widgets.FileInput(attrs={
-                'class': 'cv_input'
-            }),
-            'file': widgets.FileInput(attrs={
-                'class': 'file_input'
-            })
         }

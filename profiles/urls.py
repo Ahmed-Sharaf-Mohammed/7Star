@@ -15,10 +15,6 @@ urlpatterns = [
     path('edite/', views.edite, name='edite'),
     path('password-change/', ChangePasswordView.as_view(), name='password_change'),
 
-    path('others/', views.others, name='others'),
     path('trans/', views.trans, name='trans'),
-    path('<int:id>', views.other, name='other'),
-    path('<int:rateid>/', views.submit_rating, name='submit_rating'),
 
-    path('recommendations/', views.Recommendation_view, name='Recommendation_view'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

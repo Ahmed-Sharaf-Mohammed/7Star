@@ -1,12 +1,13 @@
 {% load static %}
 
 <!doctype html>
+
 <html class="no-js" lang="zxx">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JobLance</title>
+    <title>The Art</title>
     <link rel="icon"
         href="../Main/img/png-file-svg-white-headphone-png-icon-3090554-pngtube-headphones-icon-png-920_916.jpg" />
 
@@ -46,11 +47,11 @@
 <Header>
         <li class="container">
             <a href="{% url 'pages:index' %}" class="logo">
-                <h2 style="color: #fff;">Joblance</h2>
+                <h2 style="color: #fff;">The Art</h2>
             </a>
             <ul class="links">
                 <li><a href="{% url 'pages:index' %}">Home</a></li>
-                <li><a href="">Browse cert</a></li>
+                <li><a href="{% url 'pages:index' %}">Certifications</a></li>
                 {% if request.user.is_authenticated %}
                     <li>
                         <a href="{% url 'profiles:profile' %}">Profile</a>
@@ -75,7 +76,7 @@
                     {% endif %}
                 </div>
             </div>
-        </div>
+        </li>
 
     </Header>
     <br>
@@ -88,16 +89,15 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 site-title">
                         <h3 class="title-text">WELCOME TO</h3>
-                        <h1 class="title-text text-uppercase">Joblance</h1>
-                        <h4 class="title-text text-uppercase">Let's start a new journey</h4>
+                        <h1 class="title-text text-uppercase">The Art</h1>
+                        <h4 class="title-text text-uppercase">Let's start a new learning journey</h4>
                         <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
                                 {% if request.user.is_authenticated %}
                                 <a href=""><button type="button"
-                                        class="btn button primary-button mr-4 text-uppercase">Browse new
-                                        jobs</button></a>
+                                        class="btn button primary-button mr-4 text-uppercase">View Certifications</button></a>
                                 <a href=""><button type="button"
-                                        class="btn button secondary-button text-uppercase"> Post a job </button></a>
+                                        class="btn button secondary-button text-uppercase">Apply for a Certificate</button></a>
                                 {% else %}
                                 <a href="{% url 'registration:signup' %}"><button type="button"
                                         class="btn button primary-button mr-4 text-uppercase">Register Now</button></a>
@@ -135,36 +135,25 @@
                     </div>
                     <div class="col-lg-6 col-md-12 about-title">
                         <h2 class="text-uppercase pt-5">
-                            <span>joblance</span>
+                            <span>The Art</span>
                         </h2>
                         <div class="paragraph py-4 w-75 ">
 
                             <p class="para font-roboto">
-                                It is an online platform designed to connect job seekers and employers. <br>
-                                It offers a wide range of features, including a craftsman page for skilled
-                                professionals,
-                                career advice for job seekers, interview tips to help candidates succeed in their job
-                                search,
-                                and a job posting section where employers can post job vacancies or hire freelancers.
-                                <br><br>
-                                With Joblance, businesses can find the right talent for their projects, and job seekers
-                                can
-                                browse through multiple job openings and apply for ones that match their skills and
-                                preferences.
-                                <br><br>
-                                Whether you're looking for full-time employment or freelance work, Joblance is the
-                                perfect platform
-                                to help you achieve your goals.
+                                It is an A platform that enables users to easily access their academic certificates
+                                obtained through offline studies. It offers a secure way for users to download and
+                                request certified digital copies of any certificate they've earned,
+                                making verification and record-keeping convenient and reliable.
                             </p>
 
 
                         </div>
                         {% if request.user.is_authenticated %}
-                        <a href="{% url 'profiles:others' %}"><button type="button"
-                                class="btn button primary-button text-uppercase"> Get Your Cert </button></a>
+                        <a href=""><button type="button"
+                                class="btn button primary-button text-uppercase"> Get Your Certification </button></a>
                         {% else %}
                         <a href="{% url 'registration:signup' %}"><button type="button"
-                                class="btn button primary-button text-uppercase"> Get Your Cert </button></a>
+                                class="btn button primary-button text-uppercase"> Get Your Certification </button></a>
                         {% endif %}
 
 
@@ -184,7 +173,7 @@
 
 
             <div class="box">
-                <h3 style="color: #fff;">Joblance</h3>
+                <h3 style="color: #fff;">The Aart</h3>
                 <br>
                 <ul class="social">
                     <li>
@@ -205,7 +194,7 @@
                 </ul>
                 <br>
                 <p class="text">
-                    A big world in a small place
+                    A vast collection of knowledge in one place.
                 </p>
             </div>
 
@@ -216,13 +205,7 @@
                         <a href="">Members</a>
                     </li>
                     <li>
-                        <a href="">Find a Job</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'profiles:others' %}">Hire Now</a>
-                    </li>
-                    <li>
-                        <a href="">Craftsmen</a>
+                        <a href="">Apply for a Certificate</a>
                     </li>
                     <li>
                         <a href=""><i></i>Feedback</a>
@@ -233,13 +216,13 @@
                 <div class="line">
                     <i class="fas fa-map-marker-alt fa-fw"></i>
                     <div class="info">
-                        Cairo, Egypt
+                        Nasr-City, Cairo, Egypt
                     </div>
                 </div>
                 <div class="line">
                     <i class="far fa-clock fa-fw"></i>
                     <div class="info">
-                        Joblance Team Working Hours: 08:00-04:00
+                        The Art Team Working Hours: 7/24
                     </div>
 
                 </div>
@@ -247,13 +230,12 @@
                     <i class="fas fa-phone-volume fa-fw"></i>
                     <div class="info">
                         +201096872921
-
                     </div>
                 </div>
             </div>
 
         </div>
-       <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Joblance Team</a> </p>
+       <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">The Art Team</a> </p>
     </footer>
     <!--End Footer-->
 

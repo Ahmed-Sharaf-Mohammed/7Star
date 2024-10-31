@@ -11,14 +11,43 @@ body {
 .box {
     box-sizing: border-box;
     width: 800px;
+    height: auto;
 /*    border: 2px solid black;*/
     box-shadow: -3px -3px 7px black 3px 3px 5px rgba(49, 104, 121, 0.288);
     border-radius: 5px;
     background-color: white;
-    margin-top: 0px;
+    margin: 0 auto;
     overflow: hidden;
 }
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 15px;
+    }
+    .content, .main, .infomayar {
+        font-size: 1rem;
+    }
+    img {
+        width: 10em;
+        height: 10em;
+    }
+}
 
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+        padding: 10px;
+    }
+    .content, .main {
+        font-size: 0.9rem;
+    }
+    .edite, .pass {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
 img {
     box-sizing: border-box;
     width: 160px;
