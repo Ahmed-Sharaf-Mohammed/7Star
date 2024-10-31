@@ -14,7 +14,7 @@ urlpatterns = [
     path('', views.profile, name='profile'),
     path('edite/', views.edite, name='edite'),
     path('password-change/', ChangePasswordView.as_view(), name='password_change'),
-
     path('trans/', views.trans, name='trans'),
+    path('none/', views.fallback_file_view, name='fallback_file'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -67,3 +67,7 @@ def trans (request):
     translate_po_file()
     compile_translations()
     return render(request, 'profiles/tran.html')
+
+
+def fallback_file_view(request):
+    return render(request, 'profiles/none.html')

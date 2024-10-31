@@ -102,9 +102,16 @@
            text-align: left;
            display: block">
                         <h3>Certification</h3>
+                        {% if profile.file.name == "none" %}
                         <i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 30px;"></i> <strong
+                            style="padding-left: 10px;"><a href="{% url 'profiles:fallback_file' %}" style="color: black;
+           text-decoration:none;">{{profile.file}}</a></strong>
+                        {% else %}
+                             <i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 30px;"></i> <strong
                             style="padding-left: 10px;"><a href="{{ profile.file.url }}" style="color: black;
            text-decoration:none;">{{profile.file}}</a></strong>
+                        {% endif %}
+
                     </div>
 
                     <br>
